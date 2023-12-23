@@ -11,16 +11,17 @@
   
   <div class="row mt-3">
     <div class="col-md-6">
-      <h1>{{vivek_votes}}</h1>
+      
     </div>
     <div class="col-md-6">
-      <h1>{{sandeep_votes}}</h1>
+      
     </div>
   </div>
   
 
   <div class="row">
     <div class="col-md-6">
+      <h1>{{vivek_votes}}</h1>
       <h4>Dr. Vivek Bindra</h4>
       {{vote_for}}
       {% if user.is_authenticated %}
@@ -33,6 +34,7 @@
       {% endif %}
     </div>
     <div class="col-md-6">
+      <h1>{{sandeep_votes}}</h1>
       <h4>Sandeep Maheshwari</h4>
       {% if user.is_authenticated %}
       {% if voted_for.vote_for == 'sandeep' %}
