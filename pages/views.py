@@ -15,8 +15,8 @@ def home(request):
     if request.user.is_authenticated:
         voted_for = Vote.objects.filter(user=request.user).last()
     
-    vivek_votes = Vote.objects.filter(vote_for="vivek").count()
-    sandeep_votes = Vote.objects.filter(vote_for="sandeep").count()
+    vivek_votes = Vote.objects.filter(vote_for="vivek").count() + 36
+    sandeep_votes = Vote.objects.filter(vote_for="sandeep").count() + 36
 
     context = {
         "voted_for": voted_for, 
