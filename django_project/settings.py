@@ -92,18 +92,18 @@ DATABASES = {
 
 # https://docs.djangoproject.com/en/dev/ref/settings/#auth-password-validators
 AUTH_PASSWORD_VALIDATORS = [
-    {
-        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
-    },
+    # {
+    #     "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
+    # },
+    # {
+    #     "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
+    # },
+    # {
+    #     "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",
+    # },
+    # {
+    #     "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
+    # },
 ]
 
 # https://docs.djangoproject.com/en/dev/topics/i18n/
@@ -111,7 +111,7 @@ AUTH_PASSWORD_VALIDATORS = [
 LANGUAGE_CODE = "en-us"
 
 # https://docs.djangoproject.com/en/dev/ref/settings/#time-zone
-TIME_ZONE = "UTC"
+TIME_ZONE = "Asia/Kolkata"
 
 # https://docs.djangoproject.com/en/dev/ref/settings/#std:setting-USE_I18N
 USE_I18N = True
@@ -161,10 +161,10 @@ AUTH_USER_MODEL = "accounts.CustomUser"
 SITE_ID = 1
 
 # https://docs.djangoproject.com/en/dev/ref/settings/#login-redirect-url
-LOGIN_REDIRECT_URL = "home"
+LOGIN_REDIRECT_URL = "pages:home"
 
 # https://django-allauth.readthedocs.io/en/latest/views.html#logout-account-logout
-ACCOUNT_LOGOUT_REDIRECT_URL = "home"
+ACCOUNT_LOGOUT_REDIRECT_URL = "pages:home"
 
 # https://django-allauth.readthedocs.io/en/latest/installation.html?highlight=backends
 AUTHENTICATION_BACKENDS = (
@@ -178,3 +178,6 @@ ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_AUTHENTICATION_METHOD = "email"
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_UNIQUE_EMAIL = True
+
+
+DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
